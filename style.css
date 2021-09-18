@@ -1,0 +1,168 @@
+/* start global rules */
+:root {
+    --bright-blue: hsl(245, 75%, 52%);
+    --p-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --sopale-blue: hsl(225, 100%, 98%);
+}
+html {
+    font-size: 15px;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection {
+    background-color: hsl(245, 65%, 55%);
+    color: var(--sopale-blue);
+}
+/* end global rules */
+main {
+    background-image: url(images/pattern-background-desktop.svg);
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: -30%;
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    position: relative;
+}
+main section {
+    height: 80vh;
+    width: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+main section img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+/* start content */
+main section .content {
+    width: 100%;
+    position: absolute;
+}
+/* start text */
+main section .content .text {
+    text-align: center;
+}
+main section .content .text h2 {
+    color: var(--dark-blue);
+    font-weight: 900;
+    margin: 1rem 2rem 0.5rem;
+}
+main section .content .text p {
+    color: var(--p-blue);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.3;
+    padding: 0 2rem 1rem;
+}
+/* end text */
+/* start plan */
+main section .content .plan {
+    background-color: var(--sopale-blue);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+}
+main section .content .plan .leftside {
+    flex: 1;
+}
+main section .content .plan .leftside img {
+    width: 2.5rem;
+}
+main section .content .plan .leftside .plantext {
+    display: inline-block;
+    line-height: 1.3;
+    margin-left: 0.6rem;
+}
+main section .content .plan .leftside .plantext p:first-of-type {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+main section .content .plan .leftside .plantext p:last-of-type {
+    color: var(--p-blue);
+    font-size: 0.95rem;
+}
+
+main section .content .plan .rightside {
+    color: var(--bright-blue);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-right: 0.3rem;
+}
+main section .content .plan .rightside a {
+    transition: 0.3s ease-out;
+}
+main section .content .plan .rightside a:hover {
+    color: hsl(245, 90%, 68%);
+}
+/* end plan */
+/* start buttons */
+.proceed, .cancel {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+}
+.proceed {
+    background-color: var(--bright-blue);
+    color: var(--sopale-blue);
+    margin: 1rem auto 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem 0 hsl(245, 65%, 64%);
+}
+.proceed:hover {
+    background-color: hsl(245, 90%, 68%);
+}
+.cancel {
+    font-weight: 700;
+    color: var(--p-blue);
+}
+.cancel:hover {
+    color: var(--dark-blue);
+}
+/* end buttons */
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    align-self: flex-end;
+    margin: 0 auto 0.7rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 768px) {
+    main {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+    main section {
+        height: 65vh;
+    }
+}
+@media (max-width: 415px) {
+    main {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+    main section {
+        height: 70vh;
+    }
+}
